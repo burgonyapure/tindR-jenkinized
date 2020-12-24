@@ -21,5 +21,10 @@ WORKDIR /app
 COPY . /app
 RUN composer install
 RUN mv envexample .env
+RUN sed -i -e 's/host/'"$(printenv DB_HOST)"'/' .env
+RUN sed -i -e 's/port/'"$(printenv DB_PORT)"'/' .env
+RUN sed -i -e 's/dbse/'"$(printenv DB_DATABASE)"'/' .env
+RUN sed -i -e 's/user/'"$(printenv DB_USERNAME)"'/' .env
+RUN sed -i -e 's/pass/'"$(printenv DB_PASSWORD)"'/' .env
 RUN php artisan key:generate
 CMD php artisan serve --host=0.0.0.0 --port=8000
