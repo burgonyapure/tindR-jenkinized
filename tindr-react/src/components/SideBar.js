@@ -76,12 +76,12 @@ export default class SideBar extends Component {
   }
 
   hidePrefs() {
-    this.prefs.className = "md-modal";
+    this.prefs.className = "modal";
     this.overlay.style.visibility = "";
   }
 
   showPrefs() {
-    this.prefs.className = "md-modal show";
+    this.prefs.className = "modal show";
     this.overlay.style.visibility = "visible";
   }
 
