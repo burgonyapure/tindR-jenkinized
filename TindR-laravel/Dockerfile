@@ -9,8 +9,8 @@ ARG DB_D
 ENV DB_DATABASE=$DB_D
 ARG DB_U
 ENV DB_USERNAME=$DB_U
-ARG DB_P
-ENV DB_PASSWORD=$DB_P
+ARG DB_PAS
+ENV DB_PASSWORD=$DB_PAS
 RUN apt-get update -y && apt-get install -y libmcrypt-dev openssl libpq-dev git
 RUN docker-php-ext-install pdo pdo_pgsql pgsql
 RUN ln -s /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
