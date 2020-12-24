@@ -9,8 +9,8 @@ LOG_LEVEL=debug
 
 DB_CONNECTION=pgsql
 DB_HOST=host
-DB_PORT=5432
-DB_DATABASE=database
+DB_PORT=port
+DB_DATABASE=dbse
 DB_USERNAME=user
 DB_PASSWORD=pass
 
