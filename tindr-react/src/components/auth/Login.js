@@ -30,7 +30,7 @@ export default class Login extends Component {
             password
         } = this.state;
 
-        axios.post("http://172.31.1.57:8000/api/login", {
+        axios.post("https://"+process.env.REACT_APP_IP+":8000/api/login", {
                 email: email,
                 password: password
             },

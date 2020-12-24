@@ -42,7 +42,7 @@ class Recommendations extends Component {
     }
 
     async getRecommendations() {
-        await axios.get(`http://${process.env.REACT_APP_IP}:8000/api/recommendations/${this.props.userID}`)
+        await axios.get(`https://${process.env.REACT_APP_IP}:8000/api/recommendations/${this.props.userID}`)
         .then(response => {
             let updCurrent = {
                 index: 0,
@@ -59,7 +59,7 @@ class Recommendations extends Component {
    async getCurrentPictures() {
        const { current } = this.state;
 
-        await axios.get(`http://${process.env.REACT_APP_IP}:8000/api/pictures/${current.user.id}`)
+        await axios.get(`https://${process.env.REACT_APP_IP}:8000/api/pictures/${current.user.id}`)
             .then(response => {
                 Promise.all(response.data.map(p => {
                     this.setState({

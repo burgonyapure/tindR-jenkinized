@@ -22,7 +22,7 @@ const trans = (r, s) =>
   10}deg) rotateZ(${r}deg) scale(${s})`;
 
 async function getData(props) {
-  await axios.get(`http://${process.env.REACT_APP_IP}:8000/api/profiles/${props.userID}`)
+  await axios.get(`https://${process.env.REACT_APP_IP}:8000/api/profiles/${props.userID}`)
   .then(reponse => {
     console.log(reponse)
   })
@@ -33,7 +33,7 @@ const Deck = (props) => {
   const [data, setData] = useState([]);
   
   useEffect(async () => {
-    await fetch(`http://${process.env.REACT_APP_IP}:8000/api/profiles/${props.userID}`)
+    await fetch(`https://${process.env.REACT_APP_IP}:8000/api/profiles/${props.userID}`)
       .then(response => {
         console.log(response);
         return response.json();
