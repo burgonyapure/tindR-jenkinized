@@ -145,7 +145,7 @@ export default class SideBar extends Component {
           </a>
         </Menu>
         <div ref={ref => (this.overlay = ref)} className="overlay" />
-            <div ref={ref => (this.prefs = ref)} className="md-modal">
+            <div ref={ref => (this.prefs = ref)} className="modal">
               <SettingsPane
                 items={this._menu}
                 index="/settings/general"
