@@ -1,4 +1,4 @@
-FROM php:7.2.2-fpm
+FROM php:7.4.3-fpm
 RUN apt-get update -y && apt-get install -y libmcrypt-dev openssl
 RUN pecl install mcrypt-1.0.3
 RUN docker-php-ext-enable mcrypt
