@@ -1,5 +1,5 @@
 FROM php:7.4.3-fpm
-RUN apt-get update -y && apt-get install -y libmcrypt-dev openssl libpq-dev
+RUN apt-get update -y && apt-get install -y libmcrypt-dev openssl libpq-dev git
 RUN docker-php-ext-install pdo pdo_pgsql pgsql
 RUN ln -s /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
 RUN sed -i -e 's/;extension=pgsql/extension=pgsql/' /usr/local/etc/php/php.ini
